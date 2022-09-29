@@ -13,8 +13,37 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">usuarios</ion-label>
+      <ion-input [(ngModel)]="patente">patente</ion-input>
+      <ion-input [(ngModel)]="color">color</ion-input>
+      <ion-input [(ngModel)]="modelo">modelo</ion-input>
+      <ion-datetime presentation="date" [(ngModel)]="start"></ion-datetime>
+      <ion-input [(ngModel)]="usuario">usuario</ion-input>
+
+    </ion-item>
+
+    <ion-button expand="block" (click)="addNoticia()">mandar auto</ion-button>
+
+  
+
+  </ion-list>
+
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let rol of arregloAutoConductor">
+
+
+      <ion-item>
+        <ion-label>{{ rol.nombreCon }}</ion-label>
+        <ion-label>{{ rol.annio | date: 'dd/MM/yyyy' }}</ion-label>
+
+      </ion-item>
+
+    </ion-item-sliding>
+  </ion-list>
+
+
 </ion-content>
