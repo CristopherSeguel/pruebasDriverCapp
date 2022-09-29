@@ -1,0 +1,7 @@
+{
+  "name": "practicaSQLite004d",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
